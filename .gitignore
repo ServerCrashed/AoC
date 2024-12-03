@@ -1,4 +1,5 @@
 *.txt
 /*/*.txt
 .idea
-/*/tempCodeRunnerFile.py
+/*/temp*
+
