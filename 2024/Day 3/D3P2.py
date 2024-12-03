@@ -2,7 +2,6 @@ import re
 file_path = '2024/Day 3/input.txt'
 t=[]
 n=[]
-l=[]
 s=0
 pattern = r"(?:mul\(\d{1,3},\d{1,3}\)|do\(\)|don't\(\))"
 
