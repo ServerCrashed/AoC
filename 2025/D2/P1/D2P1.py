@@ -6,8 +6,8 @@ def findRanges(input_path):
         ranges = data.split(',')
         rangeList = []
         for Range in ranges:
-            temp = Range.split('-')
-            rangeList.append((temp[0], temp[1]))
+            i, j = Range.split('-')
+            rangeList.append((i, j))
     return rangeList
 
 def findInvalidIDS(rangeList, invalid_id_list):
@@ -21,7 +21,7 @@ def findInvalidIDS(rangeList, invalid_id_list):
                     continue
                 break
 
-            halfIndex = int(len(str(i)) / 2)
+            halfIndex = len(str(i))//2
             if str(i)[:halfIndex] == str(i)[halfIndex:]:
                 invalid_id_list.append(i)
 
