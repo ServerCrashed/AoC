@@ -36,15 +36,6 @@ def check_diagonal_up_left(grid, r, c, h, w):
 
 helpers = [check_up, check_diagonal_up_right, check_right, check_diagonal_down_right, check_down, check_diagonal_down_left, check_left, check_diagonal_up_left]
 
-def remove_paper_rolls(grid, paper_roll_list):
-    for roll in paper_roll_list:
-        i = roll[0]
-        j = roll[1]
-        new_row = grid[i][:j]
-        new_row += '.'
-        new_row += grid[i][j+1:]
-        grid[i] = new_row
-
 def removal_round(rows):
     count_of_accessable_paper_rolls = 0
     list_of_paper_rolls_to_be_removed = []
@@ -82,6 +73,4 @@ for line in lines:
     rows.append(line.strip())
 
 final_count_of_accessable_paper_rolls += removal_round(rows)
-
-
 print(f"Number of accessable paper rolls: {final_count_of_accessable_paper_rolls}")
