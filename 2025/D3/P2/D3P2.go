@@ -41,7 +41,6 @@ func getBankJoltage(bank string) (bankJoltage int64, err error) {
 			}
 		}
 		batteryJoltages = append(batteryJoltages, max)
-		fmt.Println(batteryJoltages)
 	}
 
 	bankJoltage = calculateBankJoltage(&batteryJoltages)
